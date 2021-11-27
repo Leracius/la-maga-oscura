@@ -1,0 +1,106 @@
+body {
+    background: black;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+}
+.frontside-card {
+    background-image: url(./asets/background-card.png);
+    background-size: cover;
+    width: 300px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px;
+    border-width: 8px;
+    border-style: solid;
+    border-image: linear-gradient(to left, rgb(25, 23, 42),rgb(97, 96, 114)) 1 ;
+    position: absolute;
+   
+}
+
+.name {
+    display: flex;
+    justify-content: space-between;
+    width: 96%;
+    height: 7%;
+    border-top: 5px solid hsla(0, 0%, 98%, 0.5);
+    border-left: 5px solid hsla(0, 0%, 98%, 0.5);
+    border-bottom: 5px solid hsla(0, 0%, 0%, 0.322);
+    border-right: 5px solid hsla(0, 0%, 0%, 0.322);
+}
+.name h1 {
+    margin: 2px;
+    font-size: 25px;
+    font-variant: small-caps;
+}
+.level {
+    padding: 3px;
+    display: flex;
+    justify-content: right;
+    
+}
+
+.level img {
+    width: 55%;
+    padding-right: 10px;
+    
+}
+.image-card {
+    display: flex;
+    justify-content: center;
+    
+}
+.image-card img {
+    width: 80%;
+    border-top: 10px solid rgb(114, 112, 131);
+    border-left: 10px solid rgb(97, 96, 114);
+    border-bottom: 10px solid rgb(65, 62, 100);
+    border-right: 10px solid rgb(58, 54, 97);
+    box-shadow: 0px 8px 25px 1px black;
+}
+.description-dad {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.589);
+    width: 96%;
+    height: 25%;
+    border: 5px ridge hsl(46, 55%, 35%);
+    margin-bottom: 5px;
+}
+
+.description h2, p {
+    margin: 0 2px;
+    font-variant: small-caps;
+}
+.description h2 {
+    font-size: 16px;
+}
+.description p {
+    font-size: 14px;
+   
+}
+.atk-def {
+    margin: 0px 8px;
+    border-top: 2px solid black;
+}
+.atk-def p {
+    display: flex;
+    justify-content: right;
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+}
