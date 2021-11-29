@@ -1,24 +1,38 @@
-body {
-    background: black;
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-main {
+body {
+    background: hsl(0, 0%, 0%);
     display: flex;
     justify-content: center;
+    min-height: 100vh;
 }
-
 .card {
     margin-top: 2em;
-    display: flex;
-    justify-content: center;
+    position: relative;
+    width: 328px;
+    height: 478px;
 }
-.frontside-card {
+.card div {
+    backface-visibility: hidden;
+    transition: 1s;
+}
+.back {
+    width: 100%;
+    height: 100%;
+    background-image: url(./asets/backside.jpg);
+    background-size: cover;
+    position: absolute;
+   
+}
+.front {
     background-image: url(./asets/background-card.png);
     background-size: cover;
-    width: 300px;
-    height: 450px;
+    width: 328px;
+    height: 478px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,8 +47,8 @@ main {
 .name {
     display: flex;
     justify-content: space-between;
-    width: 96%;
-    height: 7%;
+    width: 298px;
+    height: 42px;
     border-top: 5px solid hsla(0, 0%, 98%, 0.5);
     border-left: 5px solid hsla(0, 0%, 98%, 0.5);
     border-bottom: 5px solid hsla(0, 0%, 0%, 0.322);
@@ -63,7 +77,8 @@ main {
     
 }
 .image-card img {
-    width: 80%;
+    width: 260px;
+    height: 260px;
     border-top: 10px solid rgb(114, 112, 131);
     border-left: 10px solid rgb(97, 96, 114);
     border-bottom: 10px solid rgb(65, 62, 100);
@@ -76,8 +91,8 @@ main {
     justify-content: space-between;
     margin-top: 15px;
     background: rgba(255, 255, 255, 0.589);
-    width: 96%;
-    height: 22%;
+    width: 298px;
+    height: 103px;
     border: 5px ridge hsl(46, 55%, 35%);
     margin-bottom: 5px;
 }
@@ -103,4 +118,19 @@ main {
     margin: 0;
     font-size: 12px;
     font-weight: 600;
+}
+
+.front {
+    transform: perspective(800px) rotateY(0deg);
+}
+
+.back {
+    transform: perspective(800px) rotateY(180deg);
+}
+
+.card:hover .front {
+    transform: perspective(800px) rotateY(180deg);
+}
+.card:hover .back {
+    transform: perspective(800px) rotateY(360deg);
 }
